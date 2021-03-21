@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateContactMesTable extends Migration
+class CreateSkillsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,9 @@ class CreateContactMesTable extends Migration
      */
     public function up()
     {
-        Schema::create('contact_mes', function (Blueprint $table) {
+        Schema::create('skills', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name', 100)->nullable();
-            $table->string('email')->nullable();
-            $table->text('comment')->nullable();
             $table->timestamps();
         });
     }
@@ -29,6 +27,6 @@ class CreateContactMesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('contact_mes');
+        Schema::dropIfExists('skills');
     }
 }
