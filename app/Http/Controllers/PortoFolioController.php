@@ -15,7 +15,8 @@ class PortoFolioController extends Controller
     public function index()
     {
         //
-        return view('portofolio.index');
+        $p['portofolio'] = PortoFolio::all();
+        return view('portofolio.index', $p);
     }
 
     /**
@@ -26,6 +27,7 @@ class PortoFolioController extends Controller
     public function create()
     {
         //
+        return view('portofolio.index');
     }
 
     /**

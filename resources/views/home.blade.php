@@ -15,6 +15,8 @@
                     @endif
 
                     <a href="{{route('about.index')}}" class="btn btn-primary">Menu About</a>
+                    <a href="{{route('portofolio.index')}}" class="btn btn-info">Menu PortoFolio</a>
+
                 </div>
             </div>
         </div>

@@ -17,6 +17,9 @@ class CreateAboutsTable extends Migration
             $table->bigIncrements('id');
             $table->string('nama',100)->nullable();
             $table->text('description')->nullable();
+            $table->bigInteger('skill_id')->nullable();
+
+
             $table->timestamps();
         });
     }
