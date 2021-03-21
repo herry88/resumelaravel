@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\About;
 use Illuminate\Http\Request;
+use App\About;
+// use App\Portfolio;
 
-class AboutController extends Controller
+class FrontEndController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +17,8 @@ class AboutController extends Controller
     {
         //
         $a['about'] = About::all();
-        return view('about.index', $a);
+        // $a['portfolio'] = Portfolio::all();
+        return view('welcome', $a);
     }
 
     /**
@@ -27,7 +29,6 @@ class AboutController extends Controller
     public function create()
     {
         //
-        return view('about.create');
     }
 
     /**
@@ -38,25 +39,16 @@ class AboutController extends Controller
      */
     public function store(Request $request)
     {
-        //untuk function  simpan Data
-        $data = new About;
-        $data->nama = $request->input('nama');
-        $data->description = $request->input('description');
-        if($data->save()){
-          return redirect()->route('about.index')->with("success", $request->input("nama"));
-        } else{
-          return redirect()->back()->with('failed');
-        }
-        // echo "Berhasil Action form";
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\About  $about
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(About $about)
+    public function show($id)
     {
         //
     }
@@ -64,10 +56,10 @@ class AboutController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\About  $about
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(About $about)
+    public function edit($id)
     {
         //
     }
@@ -76,10 +68,10 @@ class AboutController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\About  $about
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, About $about)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -87,10 +79,10 @@ class AboutController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\About  $about
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(About $about)
+    public function destroy($id)
     {
         //
     }

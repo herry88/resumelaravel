@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    <a href="{{route('about.index')}}" class="btn btn-primary">Menu About</a>
                 </div>
             </div>
         </div>
