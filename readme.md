@@ -1,5 +1,7 @@
 ## About Latihan Laravel
 
+# Instruksi
+
 - git clone
 - composer install / composer Update
 - cp .env.example .env
