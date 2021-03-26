@@ -2,12 +2,14 @@
 
 @section('content')
 <div class="row justify-content-center">
-    <div class="col-md-8">
+    <div class="col-md-12">
         <div class="card">
-            <div class="card-header">PortoFolio</div>
+            <div class="card-header">PortoFolio
+              <a href="{{route('portofolio.create')}}" class="btn btn-primary">Add PortoFolio</a>
+            </div>
 
             <div class="card-body">
-                <a href="{{route('portofolio.create')}}" class="btn btn-primary">Add PortoFolio</a>
+
                 <table class="table table-bordered">
                     <tr>
                         <td>#</td>
